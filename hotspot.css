@@ -1,0 +1,605 @@
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .button {
+        padding: 15px; /* Adjust as needed */
+        font-size: 16px; /* Adjust as needed */
+    }
+        
+    img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust as needed */
+    }
+    
+    p {
+    font-size: 16px; /* Adjust as needed */
+    }
+
+    .toggleDebuggingTools, .toggleTitle, .toggleText {
+        display: block; /* Adjust as needed */
+    }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#background {
+    background-color: rgb(24, 24, 38);
+    width: 101%;
+    height: 101%;
+    left: -1%;
+    top: -1%;
+    position: absolute;
+    z-index: 0;
+}
+
+#imageContainer {
+    z-index: 3;
+}
+
+#gameOver {
+    z-index: 3;
+    color: rgb(255, 224, 52);
+    outline: black;
+    font-family: sans-serif;
+    font-size: 10%;
+}
+
+.currentImg {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 49.3%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    border: 3px solid white;
+    box-shadow: 0 0 30px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+    width: 100%; /* Set the width to 100% of the parent container */
+    height: auto; /* Automatically calculate the height based on the aspect ratio */
+    max-width: 450px; /* Limit the maximum width for larger screens */
+    margin: 10px; /* Add some margin for spacing between images */
+}
+
+.awaiting {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 49.3%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    border: 3px solid white;
+    box-shadow: 0 0 30px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+    width: 100%; /* Set the width to 100% of the parent container */
+    height: auto; /* Automatically calculate the height based on the aspect ratio */
+    max-width: 450px; /* Limit the maximum width for larger screens */
+    margin: 10px; /* Add some margin for spacing between images */
+    opacity: 0; /* Set opacity to 0 */
+}
+
+.exiting {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 49.3%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    border: 3px solid white;
+    box-shadow: 0 0 30px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+    width: 100%; /* Set the width to 100% of the parent container */
+    height: auto; /* Automatically calculate the height based on the aspect ratio */
+    max-width: 450px; /* Limit the maximum width for larger screens */
+    margin: 10px; /* Add some margin for spacing between images */
+    opacity: 1; /* Set opacity to 0 */
+}
+
+.checkmark {
+    position: absolute;
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.75);
+    z-index: 4;
+    opacity: 0%;
+}
+
+.crossmark {
+    position: absolute;
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.75);
+    z-index: 5;
+    opacity: 0%;
+}
+
+.flash {
+    z-index: 4;
+    position: absolute;
+    left: -1%;
+    top: -1%;
+    width: 101%;
+    height: 101%;
+    background-color: none;
+}
+
+.button {
+    position: absolute;
+    width: 14.75%;
+    height: 10%;
+    background-color: #feb30a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 3;
+    transform: scale(1);
+    opacity: 100%;
+    font-weight: bold;
+    font-size: 17.5px;
+}
+
+.button:hover {
+    background-color: #d59809;
+}
+
+.button:active {
+    background-color: #fec642;
+}
+
+.button1 {
+    top: 72.5%;
+    left: 35.25%;
+    border: 3px solid white;
+}
+
+.button2 {
+    top: 72.5%;
+    left: 50%;
+    border: 3px solid white;
+}
+
+.button3 {
+    top: 82.5%;
+    left: 35.25%;
+    border-bottom-left-radius: 25px;
+    border: 3px solid white;
+}
+
+.button4 {
+    top: 82.5%;
+    left: 50%;
+    border-bottom-right-radius: 25px;
+    border: 3px solid white;
+}
+
+.playButton {
+    z-index: 4;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-radius: 25px;
+    top: 57.5%;
+    left: 50%;
+    background-color: rgb(255, 224, 52);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: white 2.5px solid;
+    outline: rgb(255, 224, 52) 3px solid;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.playButton:hover {
+    background-color: rgb(255, 234, 113);
+}
+
+.playButton:active {
+    background-color: rgb(215, 190, 48);
+}
+
+.playAgainButton {
+    z-index: 3;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-radius: 25px;
+    top: 80%;
+    left: 50%;
+    background-color: rgb(255, 224, 52);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: white 2.5px solid;
+    outline: rgb(255, 224, 52) 3px solid;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.playAgainButton:hover {
+    background-color: rgb(255, 234, 113);
+}
+
+.playAgainButton:active {
+    background-color: rgb(215, 190, 48);
+}
+
+/* Container for Group 1 */
+.firstSliderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    filter: brightness(70%); /* Adjust the brightness value as needed */
+}
+
+/* Container for Group 2 */
+.secondSliderContainer {
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    width: 25vw;
+    height: 100vh;
+    filter: brightness(70%); /* Adjust the brightness value as needed */
+}
+
+/* Container for Group 3 */
+.thirdSliderContainer {
+    position: fixed;
+    top: 0;
+    left: 50vw;
+    width: 25vw;
+    height: 100vh;
+    filter: brightness(70%); /* Adjust the brightness value as needed */
+}
+
+/* Container for Group 4 */
+.fourthSliderContainer {
+    position: fixed;
+    top: 0;
+    left: 75vw;
+    width: 25vw;
+    height: 100vh;
+    filter: brightness(70%); /* Adjust the brightness value as needed */
+}
+  
+
+/* Add these keyframes to create the sliding animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10000vh);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(10000vh);
+    }
+}
+
+/* Apply the animation to the group-image class */
+.group-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    /*animation: slideAnimation 10s linear infinite;*/
+}
+
+.container-up {
+    animation: slideUp 1000s linear infinite;
+}
+
+.container-down {
+    animation: slideDown 1000s linear infinite;
+}
+
+.summaryTitle {
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -1%;
+    left: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.summaryText {
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 15%;
+    left: 50%;
+    font-family: sans-serif;
+    font-size: 2.5vw;
+    font-weight: 100;
+    color: white;
+    white-space: nowrap;
+}
+
+.toggleDebuggingTools {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.toggleTitle {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    display: block;
+}
+
+.toggleText {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    display: block;
+}
+
+.toggleLogo {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    display: block;
+}
+
+.togglePlayButton {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    display: block;
+}
+
+.toggleFeedbackButton {
+    z-index: 6;
+    opacity: 60%;
+    border-radius: 50px;
+    display: block;
+}
+
+.gameOverText {
+    opacity: 0%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 28.5%;
+    left: 50%;
+    font-family: sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 113);
+    z-index: 3;
+}
+
+.scoreText {
+    opacity: 0%;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+    white-space: nowrap;
+}
+
+.scoreNum {
+    opacity: 0%;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 53.5%;
+    left: 50%;
+    font-family: sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    color: #feb30a;
+    white-space: nowrap;
+}
+
+.container {
+    opacity: 0%;
+    z-index: 2;
+    width: 40%;
+    height: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: black 3px solid;
+    border-radius: 40px;
+    background-color: rgb(57, 57, 73);
+}
+
+#shareContainer {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+}
+
+.shareButton {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.twitterButton {
+    background-color: #1da1f2;
+    color: white;
+    opacity: 0%;
+}
+
+.facebookButton {
+    background-color: #1877f2;
+    color: white;
+    opacity: 0%;
+  }
+
+.buttonIcon {
+    margin-right: 8px;
+}
+
+.feedbackContainer {
+    position: absolute;
+    top: 39.5%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.feedbackContainer-alt {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.feedbackTextarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    opacity: 90%;
+    resize: none;
+}
+
+.feedbackSubmitButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feedbackCancelButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+}
+
+.feedbackSubmitButton:hover {
+    background-color: #45a049;
+}
+
+.feedbackCancelButton:hover {
+    background-color: #45a049;
+}
+
+.feedbackTriggerButton {
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    padding: 2.5%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: #4caf50;
+    color: white;
+    border: #3f9042 2px solid;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feedbackTriggerButton:hover {
+    background-color: #45a049;
+}
+
+.customMessage {
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    height: auto;
+    width: auto;
+    background-color: white;
+    color: black;
+    border: black 2px solid;
+    border-radius: 8px;
+    white-space: nowrap;
+    padding: 2.5%;
+}
+
+.customMessage::after {
+    content: "";
+    position: absolute;
+    bottom: -23px; /* Adjust the distance of the arrow from the bottom */
+    left: 50%; /* Center the arrow horizontally */
+    margin-left: -10px; /* Adjust based on the size of the arrow */
+    border-width: 10px; /* Adjust the size of the arrow */
+    border-style: solid;
+    border-color: white transparent transparent transparent; /* Match the background color of the bubble */
+}
+
+#globeContainer {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    filter: blur(0px);
+}
+
+.scoreDisplay {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 4%;
+    left: 35%;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(255, 224, 52)
+}
